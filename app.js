@@ -1,6 +1,6 @@
 window.onload = async () => {
-    const maskImageCount = 10;
-    const noMaskImageCount = 9;
+    const maskImageCount = 5;
+    const noMaskImageCount = 6;
 const trainImagesContainer = document.querySelector('.train-images');
     // Add mask images to the DOM and give them a class of `mask-img`
     for (let i = 1; i <= maskImageCount; i++) {
