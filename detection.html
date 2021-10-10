@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TensorFlow.js Mask detection</title>
+    <link href="./style.css" rel="stylesheet">
+    <script>
+    function myFunction() {
+  var x = document.getElementById("btn_detect");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+
+
+      <div class = "el1">
+          <div id="btn_detect" class = "cont1">
+              <p class = "stream">Start streaming video?</p>
+              <button onclick="myFunction()" class = "btn">Start detecting</button>
+
+          </div>
+          </div>
+
+<div id = "container" class="testWrap">
+        <div class="camera">
+            <video class="videoInsert" id="video">Video stream not available.</video>
+        </div>
+        <div class = "btncont"><button id="startbutton">Take photo</button></div>
+</div>
+
+    <canvas id="canvas">
+    <div class="output">
+        <div class="train-images"></div>
+        <img id="photo" alt="The screen capture will appear in this box.">
+    </div>
+    </canvas>
+
+
+<!-- <img id="test-img" src="./hmm.jpg" /> -->
+<!-- Load TensorFlow.js -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<!-- Load MobileNet -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+<!-- Load KNN Classifier -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
